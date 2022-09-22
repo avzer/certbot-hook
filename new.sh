@@ -6,7 +6,8 @@ hook="$path/hook.sh"
 cmd="/usr/bin/certbot"
 
 $cmd certonly \
-  -d domain.com -d *.domain.com
+  -d domain.com -d *.domain.com \
+  -d domain2.com -d *.domain2.com \
   --manual -m xxxxxxxx@domain.com \
   --preferred-challenges dns \
   --manual-auth-hook "$hook add" \
